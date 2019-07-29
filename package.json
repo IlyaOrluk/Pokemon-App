@@ -2,7 +2,7 @@
   "name": "re-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ilyaorluk.github.io",
+  "homepage": "https://ilyaorluk.github.io/Pokemon-App",
   "dependencies": {
     "axios": "^0.19.0",
     "gh-pages": "^2.0.1",

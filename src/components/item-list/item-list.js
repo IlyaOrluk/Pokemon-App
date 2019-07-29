@@ -38,19 +38,11 @@ class ItemListContainer extends Component {
     this.props.fetchItems(pageRouterSelected * listCount, listCount);
   }
 
-  componentWillUpdate(prevProps) {
-    const { pageRouterSelected, listCount } = this.props;
-    if (this.props.pageRouterSelected !== prevProps.pageRouterSelected) {
-      this.props.fetchItems(pageRouterSelected * listCount, listCount);
-      console.log(pageRouterSelected)
-    }
-  }
 
-  // handlePageClick = () => {
-  //   const { pageRouterSelected, listCount } = this.props;
-  //   this.props.fetchItems(pageRouterSelected * listCount, listCount);
-  //   console.log(pageRouterSelected-1)
-  // }
+  handlePageClick = (dir) => {
+    const { pageRouterSelected, listCount } = this.props;
+    this.props.fetchItems(dir * listCount, listCount);
+  }
 
   render() {
     const { items, loading, error, pageSelected, listCount, itemsCount, pageRouterSelected } = this.props;
@@ -69,8 +61,8 @@ class ItemListContainer extends Component {
           listCount={listCount}
           pageRouterSelected={pageRouterSelected}
           items={items} />
-          <Link className="logo" onClick={this.handlePageClick} to={`/pokemons/${pageRouterSelected}/`}>Prev</Link>
-          <Link className="logo" onClick={this.handlePageClick} to={`/pokemons/${pageRouterSelected+2}/`}>Next</Link>
+          <Link className="logo" onClick={() => this.handlePageClick(pageRouterSelected-1)} to={`/pokemons/${pageRouterSelected}/`}>Prev</Link>
+          <Link className="logo" onClick={() => this.handlePageClick(pageRouterSelected+1)} to={`/pokemons/${pageRouterSelected+2}/`}>Next</Link>
       </React.Fragment>
     );
   }
