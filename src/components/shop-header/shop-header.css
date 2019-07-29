@@ -1,0 +1,32 @@
+.shop-header {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.808);
+  display: flex;
+  justify-content: space-between;
+  background: #203127a8;
+}
+
+.shop-header a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.shop-header a:hover {
+  color: rgba(185, 185, 185, 0.411);
+}
+
+.shop-header .logo {
+  font-size: 4rem;
+  padding-left: 1rem;
+}
+
+.shop-header .shopping-cart {
+  align-self: center;
+  font-size: 1.3rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.shop-header .shopping-cart .cart-icon {
+  font-size: 2.2rem;
+  margin-right: 10px;
+}
+

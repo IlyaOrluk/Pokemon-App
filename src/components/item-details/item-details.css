@@ -1,0 +1,31 @@
+.preview-item {
+  display: flex;
+  align-items: flex-start;
+  color: rgb(39, 24, 24);
+}
+.preview-item .item-details-img {
+  width: 30vh;
+  height: auto;
+  margin: 2vh 2.5vh;
+}
+
+.preview-item .item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.preview-item .item-details h4 {
+  font-size: 40px;
+}
+
+.preview-item .item-details span {
+  width: 50%;
+}
+
+.preview-item .item-details button {
+  width: 22vh;
+  margin: 1vh 0;
+}
+
