@@ -10,7 +10,7 @@ export default class storeService {
 
   getPokemonList = async (page, limit) => {
     const res = await this.getResource(`/pokemon/?offset=${page}&limit=${limit}`);
-    console.log(res)
+    console.log(res.data)
     return res.data;
   };
 

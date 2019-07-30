@@ -1,8 +1,13 @@
-.shop-header {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.808);
+.header {
   display: flex;
-  justify-content: space-between;
-  background: #203127a8;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-logo {
+  height: 10vh;
+  width: auto;
+  margin: 1vh;
 }
 
 .shop-header a {

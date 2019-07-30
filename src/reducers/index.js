@@ -1,10 +1,10 @@
-import updateItemList from './item-list';
-import updateItemDetails from './item-details';
+import updatePokemonsList from './pokemon-list';
+import updatePokemonDetails from './pokemon-details';
 
 const reducer = (state, action) => {
   return {
-    itemList: updateItemList(state, action),
-    itemDetails: updateItemDetails(state, action)
+    pokemonsList: updatePokemonsList(state, action),
+    pokemonDetails: updatePokemonDetails(state, action)
   };
 };
 

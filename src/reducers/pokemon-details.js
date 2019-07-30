@@ -1,4 +1,4 @@
-const updateItemDetails = (state, action) => {
+const updatePokemonDetails = (state, action) => {
 
     if (state === undefined) {
       return {
@@ -31,8 +31,8 @@ const updateItemDetails = (state, action) => {
         };
   
       default:
-        return state.itemDetails;
+        return state.pokemonDetails;
     }
   };
   
-  export default updateItemDetails;
+  export default updatePokemonDetails;

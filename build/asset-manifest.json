@@ -1,14 +1,14 @@
 {
-  "main.css": "/Pokemon-App/static/css/main.0bb0f0da.chunk.css",
-  "main.js": "/Pokemon-App/static/js/main.df343047.chunk.js",
-  "main.js.map": "/Pokemon-App/static/js/main.df343047.chunk.js.map",
-  "static/js/1.99cea4db.chunk.js": "/Pokemon-App/static/js/1.99cea4db.chunk.js",
-  "static/js/1.99cea4db.chunk.js.map": "/Pokemon-App/static/js/1.99cea4db.chunk.js.map",
+  "main.css": "/Pokemon-App/static/css/main.74d94ca2.chunk.css",
+  "main.js": "/Pokemon-App/static/js/main.a201b01b.chunk.js",
+  "main.js.map": "/Pokemon-App/static/js/main.a201b01b.chunk.js.map",
+  "static/js/1.a383c127.chunk.js": "/Pokemon-App/static/js/1.a383c127.chunk.js",
+  "static/js/1.a383c127.chunk.js.map": "/Pokemon-App/static/js/1.a383c127.chunk.js.map",
   "runtime~main.js": "/Pokemon-App/static/js/runtime~main.24d445d3.js",
   "runtime~main.js.map": "/Pokemon-App/static/js/runtime~main.24d445d3.js.map",
   "static/media/app.css": "/Pokemon-App/static/media/bg1.26b5551b.png",
-  "static/css/main.0bb0f0da.chunk.css.map": "/Pokemon-App/static/css/main.0bb0f0da.chunk.css.map",
+  "static/css/main.74d94ca2.chunk.css.map": "/Pokemon-App/static/css/main.74d94ca2.chunk.css.map",
   "index.html": "/Pokemon-App/index.html",
-  "precache-manifest.775b71353c1bbed59fcf7ed816d498d6.js": "/Pokemon-App/precache-manifest.775b71353c1bbed59fcf7ed816d498d6.js",
+  "precache-manifest.1d3377f8aa076dcd4cc89bc5d15f33fc.js": "/Pokemon-App/precache-manifest.1d3377f8aa076dcd4cc89bc5d15f33fc.js",
   "service-worker.js": "/Pokemon-App/service-worker.js"
 }

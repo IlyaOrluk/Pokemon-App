@@ -1,16 +1,15 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ShopHeader from '../shop-header';
-import { HomePage } from '../pages';
-import ItemDetailsContainer from '../item-details';
-import ItemListContainer from '../item-list';
+import Header from '../header';
+import { HomePage, PokemonPage, PokemonList  } from '../pages';
+
 
 import './app.css';
 
 const App = () => {
   return (
     <main role="main" className="container">
-      <ShopHeader />
+      <Header />
       <Switch>
         <Route
           path="/"
@@ -19,12 +18,12 @@ const App = () => {
         <Route path="/pokemon/:name"
           render={({ match }) => {
             const { name } = match.params;
-            return <ItemDetailsContainer pokemon={name} />
+            return <PokemonPage pokemon={name} />
           }} exact />
         <Route path="/pokemons/:id"
           render={({ match }) => {
             const { id } = match.params;
-            return <ItemListContainer pageRouterSelected={Number(id-1)} />
+            return <PokemonList pageRouterSelected={Number(id-1)} />
           }} exact />
       </Switch>
     </main>
