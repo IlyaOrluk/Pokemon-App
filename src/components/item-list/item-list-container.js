@@ -19,14 +19,8 @@ class ItemListContainer extends React.Component {
       }
     }
   
-  
-    handlePageClick = (page) => {
-      console.log(page.currentPage)
-    }
-  
     render() {
-      const { items, loading, error, listCount, itemsCount, pageRouterSelected } = this.props;
-      console.log(this.props)
+      const { items, loading, error, listCount, itemsCount, pageRouterSelected, onError } = this.props;
       if (loading) {
         return <Spinner />
       }
@@ -38,10 +32,11 @@ class ItemListContainer extends React.Component {
       return (
         <React.Fragment>
           <ItemList
+            onError={onError}
             listCount={listCount}
             pageRouterSelected={pageRouterSelected}
             items={items} />
-          <Pagination totalRecords={itemsCount} pageLimit={listCount} pageNeighbours={1} onPageChanged={this.handlePageClick} currentPage={pageRouterSelected + 1} />
+          <Pagination totalRecords={itemsCount} pageLimit={listCount} pageNeighbours={1} onPageChanged={() => {}} currentPage={pageRouterSelected + 1} />
         </React.Fragment>
       );
     }

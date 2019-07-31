@@ -3,7 +3,6 @@ const updatePokemonsList = (state, action) => {
   if (state === undefined) {
     return {
       items: [],
-      pageSelected: 0,
       listCount: 30,
       itemsCount: 964,
       loading: true,
@@ -11,11 +10,12 @@ const updatePokemonsList = (state, action) => {
     };
   }
 
+  const noImage = 'https://pokemon-visualguide.com/assets/img/pokeball.png';
+
   switch (action.type) {
     case 'FETCH_ITEMS_REQUEST':
       return {
         items: [],
-        pageSelected: state.pokemonsList.pageSelected,
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: true,
@@ -25,7 +25,6 @@ const updatePokemonsList = (state, action) => {
     case 'FETCH_ITEMS_SUCCESS':
       return {
         items: action.payload,
-        pageSelected: state.pokemonsList.pageSelected,
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: false,
@@ -35,22 +34,24 @@ const updatePokemonsList = (state, action) => {
     case 'FETCH_ITEMS_FAILURE':
       return {
         items: [],
-        pageSelected: state.pokemonsList.pageSelected,
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: false,
         error: action.payload
       };
 
-    case 'PAGE_NUMBER':
+    case 'ITEM_IMAGE_ERROR':
       return {
-        items: state.pokemonsList.items,
-        pageSelected: action.payload,
+        items: [
+          ...state.pokemonsList.items.slice(0, action.payload),
+          { name: state.pokemonsList.items[action.payload].name , img: noImage },
+          ...state.pokemonsList.items.slice(action.payload + 1)
+        ],
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: false,
         error: null
-      };
+      }
 
     default:
       return state.pokemonsList;

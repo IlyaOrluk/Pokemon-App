@@ -12,8 +12,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 14vh;
-  height: 13vh;
+  width: 15vh;
+  height: 12vh;
   margin: 1.5vh;
   /* border: 1px solid #fff;
   border-radius: 25px; */
@@ -23,11 +23,16 @@
   height: 9vh;
 }
 
-.show-item a{
-  font-size: 20px;
+.show-item span{
+  font-size: 15px;
   font-weight: 500;
   color: #000;
 }
+
+/* .show-item:hover{
+  text-decoration: black;
+} */
+
 .pagination {
   cursor: pointer;
   display: flex;

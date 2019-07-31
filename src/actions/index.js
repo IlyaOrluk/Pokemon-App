@@ -38,18 +38,20 @@ const itemError = (error) => {
   };
 };
 
-const handlePageNumber = (number) => {
+const onImageError = (id) => {
   return {
-    type: 'PAGE_NUMBER',
-    payload: number
-  };
+    type: 'ITEM_IMAGE_ERROR',
+    payload: id
+  }
 }
+
+
 
 
 const fetchItems = (service) => (pageNumber, listCount) => (dispatch) => {
   dispatch(itemsRequested());
   service.getPokemonList(pageNumber, listCount)
-    .then((res) => dispatch(itemsLoaded(res.results)))
+    .then((res) => dispatch(itemsLoaded(res)))
     .catch((err) => dispatch(itemsError(err)));
 };
 
@@ -63,5 +65,5 @@ const fetchItem = (service) => (pokemon) => (dispatch) => {
 export {
   fetchItems,
   fetchItem,
-  handlePageNumber
+  onImageError
 };
