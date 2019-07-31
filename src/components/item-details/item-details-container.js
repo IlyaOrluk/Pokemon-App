@@ -33,6 +33,8 @@ class ItemDetailsContainer extends React.Component {
                     item={item}>
                     <Detail itemTag='span' label='Weight: ' field='weight' />
                     <Detail itemTag='span' label='Height: ' field='height' />
+                    <Detail itemTag='span' label='Abilities: ' field='abilities' />
+                    <Detail itemTag='span' label='Type(s): ' field='types' />
                 </ItemDetails>
             </React.Fragment>
         );

@@ -15,7 +15,9 @@ export default class storeService {
 
   getPokemon = async (pokemon) => {
     const res = await this.getResource(`/pokemon/${pokemon}/`);
-    return res.data;
+    console.log(res.data)
+    console.log(this.parcePokemon(res.data))
+    return this.parcePokemon(res.data);
   };
 
   getPokemonImage = (id) => {
@@ -28,11 +30,40 @@ export default class storeService {
 };
 
 
-  parcePokemons = (item) => {
-    const id = this._extractId(item)
+  parcePokemons = (items) => {
+    const id = this._extractId(items);
+    return {
+      name: items.name,
+      img: this.getPokemonImage(id)
+    }
+  }
+
+  parcePokemon = (item) => {
+    let abilities = [], types = [], stats = [];
+    item.abilities.forEach((item) => {
+      abilities.push(item.ability.name)
+    })
+    item.types.forEach((item) => {
+      types.push(item.type.name)
+    })
+    item.stats.forEach((item) => {
+      stats.push({
+        name: item.stat.name,
+        stat: item.base_stat
+      })
+    })
     return {
       name: item.name,
-      img: this.getPokemonImage(id)
+      img: {
+        front: item.sprites.front_default,
+        back: item.sprites.back_default,
+      },
+      weight: item.weight/10+'kg',
+      height: item.height/10+'m',
+      base_exp: item.base_experience,
+      abilities: abilities,
+      types: types,
+      stats: stats
     }
   }
 }

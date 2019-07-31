@@ -1,0 +1,15 @@
+.home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../../img/browse.jpg) center no-repeat / cover;
+    width: 30vh;
+    height: 30vh;
+    border-radius: 10px;
+}
+
+.browse-poke-link {
+    font-size: 60px;
+    font-weight: 500;
+    color: #000;
+}
