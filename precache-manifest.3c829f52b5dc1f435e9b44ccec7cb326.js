@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "24c0b6c61d0241a0f9bf1b0cdb24ebfe",
-    "url": "/Pokemon-App/static/media/logo.24c0b6c6.png"
+    "revision": "023d617a1b733e2862bc8d439cface20",
+    "url": "/Pokemon-App/static/media/logo.023d617a.png"
   },
   {
     "revision": "b7c95918efb5c88a27e10bc89dcd07b1",
@@ -16,19 +16,19 @@ self.__precacheManifest = [
     "url": "/Pokemon-App/static/js/runtime~main.24d445d3.js"
   },
   {
-    "revision": "13d56ddb65428c02c76a",
-    "url": "/Pokemon-App/static/js/main.13d56ddb.chunk.js"
+    "revision": "3f931c9fd330f0d4f27e",
+    "url": "/Pokemon-App/static/js/main.3f931c9f.chunk.js"
   },
   {
-    "revision": "904bdb892b11be74bfa7",
-    "url": "/Pokemon-App/static/js/1.904bdb89.chunk.js"
+    "revision": "8821662fc604b6e1f3cf",
+    "url": "/Pokemon-App/static/js/1.8821662f.chunk.js"
   },
   {
-    "revision": "13d56ddb65428c02c76a",
-    "url": "/Pokemon-App/static/css/main.c534fcbf.chunk.css"
+    "revision": "3f931c9fd330f0d4f27e",
+    "url": "/Pokemon-App/static/css/main.ff3797e4.chunk.css"
   },
   {
-    "revision": "6addd15b9acdda72eb24ad344a301dac",
+    "revision": "a8b86929854c70082ea580ea023f30f5",
     "url": "/Pokemon-App/index.html"
   }
 ];
