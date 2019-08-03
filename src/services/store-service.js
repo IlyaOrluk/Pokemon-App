@@ -15,9 +15,21 @@ export default class storeService {
 
   getPokemon = async (pokemon) => {
     const res = await this.getResource(`/pokemon/${pokemon}/`);
-    console.log(res.data)
     console.log(this.parcePokemon(res.data))
     return this.parcePokemon(res.data);
+  };
+
+  getPokemonSpecies = async (url) => {
+    const res = await axios.get(url);
+    // console.log(res.data)
+    return this.parcePokemonSpecies(res.data);
+  };
+
+  getPokemonEvolutionChain = async (url) => {
+    const res = await axios.get(url);
+    console.log(res.data.chain.species.url)
+    // console.log(this.parcePokemonEvolutions(res.data))
+    return this.parcePokemonEvolutions(res.data);
   };
 
   getPokemonImage = (id) => {
@@ -63,7 +75,59 @@ export default class storeService {
       base_exp: item.base_experience,
       abilities: abilities,
       types: types,
-      stats: stats
+      stats: stats,
+      species: item.species.url
+    }
+  }
+
+  parcePokemonSpecies = (item) => {
+    let varieties = [];
+    item.varieties.forEach((item) => {
+      varieties.push(item.pokemon.name)
+    })
+    return {
+      name: item.name,
+      color: item.color.name,
+      habitat: item.habitat.name,
+      shape: item.shape.name,
+      growh_rate: item.growth_rate.name,
+      varieties: varieties,
+      genus: item.genera[2].genus,
+      evolution_chain: item.evolution_chain.url
+    }
+  }
+
+  parcePokemonEvolutions = (item) => {
+    let levelTwoEvoArr = [];
+    item.chain.evolves_to.forEach((item) => {
+      if (item.evolves_to[0] === undefined) {
+        levelTwoEvoArr.push({
+          name: item.species.name,
+          img: this.getPokemonImage(this._extractId(item.species)),
+          levelTrhee: null
+        })
+      } else {
+      levelTwoEvoArr.push({
+        name: item.species.name,
+        img: this.getPokemonImage(this._extractId(item.species)),
+        levelTrhee: {
+          name: item.evolves_to[0].species.name,
+          img: this.getPokemonImage(this._extractId(item.evolves_to[0].species))
+        }
+      })
+    }
+    })
+    return {
+      chain: {
+        levelOne: {
+          name: item.chain.species.name,
+          img: this.getPokemonImage(this._extractId(item.chain.species))
+        },
+        levelTwo: levelTwoEvoArr,
+      }
+
     }
   }
 }
+
+// https://pokeapi.co/api/v2/pokemon/?limit=964  poke input search list...

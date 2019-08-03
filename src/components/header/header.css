@@ -2,12 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Shadows Into Light', cursive;
+}
+.header-title {
+  position: absolute;
+  bottom: -10%;
+  right: 19%;
+  color: #ffcb05;
+  font-size: 25px;
+  transform: rotateZ(6deg);
+}
+
+.header-logo img {
+  height: 15vh;
+  width: auto;
 }
 
 .header-logo {
-  height: 10vh;
+  height: 15vh;
   width: auto;
-  margin: 1vh;
+  margin: 2vh 0;
+  position: relative;
 }
 
 .shop-header a {
@@ -35,3 +50,18 @@
   margin-right: 10px;
 }
 
+@media (max-width: 1000px) { 
+
+}
+@media (max-width: 667px) { 
+  .header-logo {
+    height: 14ch;
+    width: auto;
+  }
+  .header-logo img {
+    height: 14ch;
+  }
+  .header-title {
+    font-size: 13px;
+  }
+}

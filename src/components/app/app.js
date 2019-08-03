@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../header';
-import { HomePage, PokemonPage, PokemonList  } from '../pages';
+import { HomePage, PokemonPage, PokemonList, PokemonSearch  } from '../pages';
 
 
 import './app.css';
@@ -25,6 +25,8 @@ const App = () => {
             const { id } = match.params;
             return <PokemonList pageRouterSelected={Number(id-1)} />
           }} exact />
+          <Route path="/searchpokemon/"
+          component={PokemonSearch} exact />
       </Switch>
     </main>
   );

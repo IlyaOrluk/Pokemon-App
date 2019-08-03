@@ -2,14 +2,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../../img/browse.jpg) center no-repeat / cover;
+    flex-wrap: wrap;
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 5vh;
+    background: rgba(255, 255, 255, 0.575);
+    height: 100%;
+}
+.link-btn {
+    margin: 5vh 2vw;
     width: 30vh;
     height: 30vh;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
 }
 
-.browse-poke-link {
-    font-size: 60px;
-    font-weight: 500;
-    color: #000;
+.browse {
+    background: url(../../img/browse.jpg) center no-repeat / cover;
 }
+.search {
+    background: url(../../img/search.jpg) center no-repeat / cover;
+}
+.mini-game {
+    background: url(../../img/mini-game.jpg) center no-repeat / cover;
+}
+.link-btn span {
+    font-size: 43px;
+    color: rgb(27, 7, 7);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    text-align: center;
+    /* border: 1px solid rgb(27, 7, 7); */
+}
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+} */

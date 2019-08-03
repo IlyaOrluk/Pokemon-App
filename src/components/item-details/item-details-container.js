@@ -17,6 +17,12 @@ class ItemDetailsContainer extends React.Component {
         this.props.fetchItem(this.props.fetchItemValue);
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.fetchItemValue !== prevProps.fetchItemValue) {
+            this.props.fetchItem(this.props.fetchItemValue)
+        }
+    }
+
     render() {
         const { item, loading, error } = this.props;
         if (loading) {

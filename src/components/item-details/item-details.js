@@ -3,16 +3,17 @@ import './item-details.css';
 
 
 const ItemDetails = ({ item, ...props }) => {
-    const { name, img } = item;
+    const { name, img, base_exp } = item;
     const frontImage = img.front ? <img src={img.front} alt={name} /> : <img src='https://pokemon-visualguide.com/assets/img/pokeball.png' alt={name} />;
     const backImage = img.back ? <img src={img.back} alt={name} /> : null;
     return (
-        <div className='preview-item-box'>
+        <React.Fragment>
             <h4>{name}</h4>
             <div className='preview-item'>
                 <div className='item-details-images'>
                     {frontImage}
                     {backImage}
+                    <span className='base-exp'>{base_exp}xp</span>
                 </div>
                 <div className='item-details'>
                     {
@@ -23,6 +24,7 @@ const ItemDetails = ({ item, ...props }) => {
                 </div>
             </div>
             <div className='item-details-stats'>
+            <h5>Base stats:</h5>
                 {
                     item.stats.map((item, id) => {
                         const progresStyle = {
@@ -40,7 +42,7 @@ const ItemDetails = ({ item, ...props }) => {
                     })
                 }
             </div>
-        </div>
+        </React.Fragment>
     );
 }
 

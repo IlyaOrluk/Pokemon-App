@@ -1,0 +1,31 @@
+.pokemon-evolutions-chain {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    color: black;
+    margin: 2vh 0;
+}
+.pokemon-evolutions {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.pokemon-evolution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 2vh;
+    position: relative;
+}
+.fa-long-arrow-alt-right {
+    position: absolute;
+    top: 40%;
+    left: -25%;
+}
+.second-evolutions-chain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
