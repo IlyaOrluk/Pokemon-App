@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../header';
-import { HomePage, PokemonPage, PokemonList, PokemonSearch  } from '../pages';
+import Footer from '../footer';
+import { HomePage, PokemonPage, PokemonList, PokemonSearch, PokemonMiniGame  } from '../pages';
 
 
 import './app.css';
@@ -27,7 +28,10 @@ const App = () => {
           }} exact />
           <Route path="/searchpokemon/"
           component={PokemonSearch} exact />
+          <Route path="/minigame/"
+          component={PokemonMiniGame} exact />
       </Switch>
+      <Footer/>
     </main>
   );
 };

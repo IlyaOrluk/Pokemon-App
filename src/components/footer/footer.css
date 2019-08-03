@@ -1,0 +1,14 @@
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 25px;
+    font-family: 'Shadows Into Light', cursive;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+.footer span {
+    margin: 0 2vh;
+}

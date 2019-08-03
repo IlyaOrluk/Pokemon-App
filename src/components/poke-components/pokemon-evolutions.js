@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { withStoreService } from '../hoc';
+import { withService } from '../hoc';
 import { fetchPokemonEvolutions } from '../../actions';
 import { compose } from '../../utils';
 
@@ -81,6 +81,6 @@ const mapDispatchToProps = (dispatch, { storeService }) => {
 };
 
 export default compose(
-    withStoreService(),
+    withService(),
     connect(mapStateToProps, mapDispatchToProps)
 )(PokemonEvolutions);

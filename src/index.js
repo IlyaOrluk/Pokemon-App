@@ -5,21 +5,21 @@ import { HashRouter as Router } from 'react-router-dom';
 
 import App from './components/app';
 import ErrorBoundry from './components/error-boundry';
-import storeService from './services/store-service';
-import { StoreServiceProvider } from './components/store-service-context';
+import service from './services/service';
+import { ServiceProvider } from './components/service-context';
 
 import store from './store';
 
-const DATA = new storeService();
+const DATA = new service();
 
 ReactDOM.render(
   <Provider store={store}>
     <ErrorBoundry>
-      <StoreServiceProvider value={DATA}>
+      <ServiceProvider value={DATA}>
         <Router>
           <App />
         </Router>
-      </StoreServiceProvider>
+      </ServiceProvider>
     </ErrorBoundry>
   </Provider>,
   document.getElementById('app')

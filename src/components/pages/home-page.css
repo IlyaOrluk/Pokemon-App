@@ -32,7 +32,7 @@
     font-size: 43px;
     color: rgb(27, 7, 7);
     background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px 10px 0 0;
+    /* border-radius: 10px 10px 0 0; */
     width: 100%;
     text-align: center;
     /* border: 1px solid rgb(27, 7, 7); */

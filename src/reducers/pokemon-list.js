@@ -6,7 +6,8 @@ const updatePokemonsList = (state, action) => {
       listCount: 30,
       itemsCount: 964,
       loading: true,
-      error: null
+      error: null,
+      searchName: ''
     };
   }
 
@@ -19,7 +20,8 @@ const updatePokemonsList = (state, action) => {
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: true,
-        error: null
+        error: null,
+        searchName: state.pokemonsList.searchName
       };
 
     case 'FETCH_ITEMS_SUCCESS':
@@ -28,7 +30,8 @@ const updatePokemonsList = (state, action) => {
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: false,
-        error: null
+        error: null,
+        searchName: state.pokemonsList.searchName
       };
 
     case 'FETCH_ITEMS_FAILURE':
@@ -37,7 +40,8 @@ const updatePokemonsList = (state, action) => {
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: false,
-        error: action.payload
+        error: action.payload,
+        searchName: state.pokemonsList.searchName
       };
 
     case 'ITEM_IMAGE_ERROR':
@@ -50,7 +54,18 @@ const updatePokemonsList = (state, action) => {
         listCount: state.pokemonsList.listCount,
         itemsCount: state.pokemonsList.itemsCount,
         loading: false,
-        error: null
+        error: null,
+        searchName: state.pokemonsList.searchName
+      }
+
+      case 'ITEM_SEARCH_NAME':
+      return {
+        items: state.pokemonsList.items,
+        listCount: state.pokemonsList.listCount,
+        itemsCount: state.pokemonsList.itemsCount,
+        loading: false,
+        error: null,
+        searchName: action.payload
       }
 
     default:

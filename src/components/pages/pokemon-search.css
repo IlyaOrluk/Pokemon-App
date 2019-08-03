@@ -3,6 +3,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
+}
+.pokemon-search-page h2{
+    color: #000;
 }
 .pokemon-search-list{
     display: flex;
@@ -12,4 +16,14 @@
 }
 .pokemon-search-list a {
     margin: .5vh;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5px;
+    color: #000;
+}
+.pokemon-search-page input {
+    border: none;
+    border-bottom: 2px solid #000;
+    font-size: 25px;
+    background: none;
 }

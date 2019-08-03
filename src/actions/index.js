@@ -86,6 +86,13 @@ const onImageError = (id) => {
   }
 }
 
+const onSearchPokemon = (name) => {
+  console.log(name)
+  return {
+    type: 'ITEM_SEARCH_NAME',
+    payload: name
+  }
+}
 // [request_type]_[object]_[action]
 
 
@@ -123,5 +130,6 @@ export {
   fetchItem,
   fetchPokemonSpecies,
   fetchPokemonEvolutions,
-  onImageError
+  onImageError,
+  onSearchPokemon
 };

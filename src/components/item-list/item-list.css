@@ -1,3 +1,6 @@
+.pokemon-list{
+  margin-bottom: 50px;
+}
 .item-list {
   list-style: none;
   display: flex;

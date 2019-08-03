@@ -1,8 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withStoreService } from '../hoc';
+import { withService } from '../hoc';
 import { fetchItem } from '../../actions';
 import { compose } from '../../utils';
+
+
+
 
 import ItemDetailsContainer from '../item-details';
 import { PokemonSpecies, PokemonEvolutions } from '../poke-components';
@@ -33,6 +36,6 @@ const mapDispatchToProps = (dispatch, { storeService }) => {
 };
 
 export default compose(
-    withStoreService(),
+    withService(),
     connect(mapStateToProps, mapDispatchToProps)
 )(PokemonPage);

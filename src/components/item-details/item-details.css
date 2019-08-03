@@ -4,7 +4,7 @@
   align-items: center;
   color: rgb(18, 41, 70);
   background: rgba(255, 255, 255, 0.575);
-  margin-bottom: 3vh; 
+  margin-bottom: 50px;
 }
 .preview-item {
   display: flex;

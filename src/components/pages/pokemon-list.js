@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withStoreService } from '../hoc';
+import { withService } from '../hoc';
 import { fetchItems, onImageError } from '../../actions';
 import { compose } from '../../utils';
 
@@ -14,7 +14,7 @@ const PokemonList = ({ items, pageRouterSelected, fetchItems, listCount, itemsCo
   }
 
   return (
-    <React.Fragment>
+    <div className='pokemon-list'>
       <ItemListContainer
           onError={onError}
           fetchItems={fetchItems}
@@ -24,7 +24,7 @@ const PokemonList = ({ items, pageRouterSelected, fetchItems, listCount, itemsCo
           itemsCount={itemsCount}
           listCount={listCount}
           items={items} />
-    </React.Fragment>
+    </div>
   );
 };
 
@@ -40,7 +40,7 @@ const mapDispatchToProps = (dispatch, { storeService }) => {
 };
 
 export default compose(
-  withStoreService(),
+  withService(),
   connect(mapStateToProps, mapDispatchToProps)
 )(PokemonList);
 

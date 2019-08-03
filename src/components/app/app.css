@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lacquer|Shadows+Into+Light&display=swap');
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
     background: url(../../img/bg1.png) no-repeat fixed center / cover;
     color: #fff;
