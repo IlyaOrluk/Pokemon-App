@@ -128,7 +128,7 @@ class Pagination extends Component {
                   <li key={index} className="page-item">
                     <Link
                       className="page-link"
-                      to={`/pokemons/${this.props.currentPage-1}/`}
+                      to={`/${this.props.routePath}/${this.props.currentPage-1}/`}
                       aria-label="Previous"
                     >
                       <i className="fas fa-caret-left"></i>
@@ -141,7 +141,7 @@ class Pagination extends Component {
                   <li key={index} className="page-item">
                     <Link
                       className="page-link"
-                      to={`/pokemons/${this.props.currentPage+1}/`}
+                      to={`/${this.props.routePath}/${this.props.currentPage+1}/`}
                       aria-label="Next"
                     >
                       <i className="fas fa-caret-right"></i>
@@ -158,7 +158,7 @@ class Pagination extends Component {
                 >
                   <Link
                     className="page-link"
-                    to={`/pokemons/${page}/`}
+                    to={`/${this.props.routePath}/${page}/`}
                     onClick={() => this.handleClick(page)}
                   >
                     {page}

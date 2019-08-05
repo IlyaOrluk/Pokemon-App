@@ -11,6 +11,7 @@ import ItemDetailsContainer from '../item-details';
 import { PokemonSpecies, PokemonEvolutions } from '../poke-components';
 
 const PokemonPage = ({ item, loading, error, fetchItem, pokemon, species }) => {
+    console.log(item.species)
     return (
         <div className='preview-item-box'>
             <ItemDetailsContainer
@@ -19,13 +20,13 @@ const PokemonPage = ({ item, loading, error, fetchItem, pokemon, species }) => {
                 error={error}
                 loading={loading}
                 item={item} />
-                <PokemonSpecies speciesUrl={item.species}/>
-                <PokemonEvolutions url={species.evolution_chain}/>
+            <PokemonSpecies speciesUrl={item.species} />
+            <PokemonEvolutions url={species.evolution_chain} />
         </div>
     );
 };
 
-const mapStateToProps = ({ pokemonDetails: { item, loading, error }, pokemonSpecies: { species }}) => {
+const mapStateToProps = ({ pokemonDetails: { item, loading, error }, pokemonSpecies: { species } }) => {
     return { item, loading, error, species };
 };
 

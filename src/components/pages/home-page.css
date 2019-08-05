@@ -4,9 +4,9 @@
     align-items: center;
     flex-wrap: wrap;
     font-family: 'Shadows Into Light', cursive;
-    margin-top: 5vh;
     background: rgba(255, 255, 255, 0.575);
-    height: 100%;
+    margin-top: 5vh;
+    margin-bottom: 50px;
 }
 .link-btn {
     margin: 5vh 2vw;
@@ -36,6 +36,12 @@
     width: 100%;
     text-align: center;
     /* border: 1px solid rgb(27, 7, 7); */
+}
+
+@media (max-width: 667px) { 
+  .link-btn span {
+    font-size: 7vh;
+  }
 }
 
 /* @keyframes fadeIn {

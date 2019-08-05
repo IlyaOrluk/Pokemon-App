@@ -2,6 +2,7 @@ import React from 'react';
 import './item-details.css';
 
 
+
 const ItemDetails = ({ item, ...props }) => {
     const { name, img, base_exp } = item;
     const frontImage = img.front ? <img src={img.front} alt={name} /> : <img src='https://pokemon-visualguide.com/assets/img/pokeball.png' alt={name} />;

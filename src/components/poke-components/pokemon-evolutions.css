@@ -29,3 +29,12 @@
     justify-content: center;
     flex-direction: row;
 }
+
+@media (max-width: 375px) { 
+    .pokemon-evolution {
+        margin: 0;
+    }
+    .fa-long-arrow-alt-right {
+        left: -12%;
+    }
+  }

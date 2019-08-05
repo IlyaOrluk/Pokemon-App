@@ -82,13 +82,14 @@ export default class storeService {
 
   parcePokemonSpecies = (item) => {
     let varieties = [];
+    let habitat = item.habitat ? item.habitat.name : 'Unknown';
     item.varieties.forEach((item) => {
       varieties.push(item.pokemon.name)
     })
     return {
       name: item.name,
       color: item.color.name,
-      habitat: item.habitat.name,
+      habitat: habitat,
       shape: item.shape.name,
       growh_rate: item.growth_rate.name,
       varieties: varieties,

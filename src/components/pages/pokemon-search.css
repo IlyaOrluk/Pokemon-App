@@ -27,3 +27,13 @@
     font-size: 25px;
     background: none;
 }
+
+@media (max-width: 375px) { 
+    .pokemon-search-page h2 {
+      font-size: 25px;
+    }
+    .pokemon-search-page input {
+        font-size: 20px;
+    }
+    
+  }

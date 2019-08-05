@@ -59,14 +59,15 @@ const speciesError = (error) => {
   };
 };
 
-const evolutionsLoaded = (species) => { 
+export const evolutionsLoaded = (evolutions) => { 
+  console.log(evolutions)
   return {
     type: 'FETCH_EVOLUTIONS_SUCCESS',
-    payload: species
+    payload: evolutions
   };
 };
 
-const evolutionsRequested = () => {
+export const evolutionsRequested = () => {
   return {
     type: 'FETCH_EVOLUTIONS_REQUEST'
   };
@@ -87,7 +88,6 @@ const onImageError = (id) => {
 }
 
 const onSearchPokemon = (name) => {
-  console.log(name)
   return {
     type: 'ITEM_SEARCH_NAME',
     payload: name

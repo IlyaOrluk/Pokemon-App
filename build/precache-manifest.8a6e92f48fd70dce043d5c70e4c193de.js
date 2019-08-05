@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/Pokemon-App/static/js/runtime~main.24d445d3.js"
   },
   {
-    "revision": "1b2f214afb263519531a",
-    "url": "/Pokemon-App/static/js/main.1b2f214a.chunk.js"
+    "revision": "d54824cb05e51e4c52a0",
+    "url": "/Pokemon-App/static/js/main.d54824cb.chunk.js"
   },
   {
-    "revision": "71a274983035f5e2896d",
-    "url": "/Pokemon-App/static/js/1.71a27498.chunk.js"
+    "revision": "096ca259748d4553a692",
+    "url": "/Pokemon-App/static/js/1.096ca259.chunk.js"
   },
   {
-    "revision": "1b2f214afb263519531a",
-    "url": "/Pokemon-App/static/css/main.a80f6ed5.chunk.css"
+    "revision": "d54824cb05e51e4c52a0",
+    "url": "/Pokemon-App/static/css/main.2ad0a990.chunk.css"
   },
   {
-    "revision": "5dee99efad231d09ff3d6da8ff9dde24",
+    "revision": "ac13ed5ffddb132afd6b36877683a6bb",
     "url": "/Pokemon-App/index.html"
   }
 ];

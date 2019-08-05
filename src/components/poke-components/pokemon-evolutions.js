@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { withService } from '../hoc';
-import { fetchPokemonEvolutions } from '../../actions';
+import { fetchPokemonEvolutions, evolutionsRequested } from '../../actions';
 import { compose } from '../../utils';
 
 // import ErrorIndicator from '../error-indicator';
@@ -17,6 +17,10 @@ class PokemonEvolutions extends React.Component {
         if (this.props.url !== prevProps.url) {
             this.props.fetchPokemonEvolutions(this.props.url)
         }
+    }
+
+    componentWillMount(){
+        evolutionsRequested();
     }
 
     render() {

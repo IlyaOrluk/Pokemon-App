@@ -86,4 +86,25 @@
   .preview-item {
     flex-direction: column;
   }
+  .item-details-images img {
+    width: auto;
+    height: 7ch;
+  }
+  .item-details-images {
+    width: auto;
+    height: 7ch;
+  }
+}
+
+@media (max-width: 375px) { 
+  .preview-item-box h4 {
+    font-size: 40px;
+  }
+  .preview-item-box h3 {
+    font-size: 1.5rem;
+  }
+  .preview-item-box h2 {
+    font-size: 1.7rem;
+  }
+
 }

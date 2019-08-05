@@ -11,6 +11,10 @@ class PokemonSearch extends React.Component {
 
     componentDidMount() {
         this.props.fetchItems(0, this.props.itemsCount);
+
+    }
+
+    componentWillMount() {
         this.props.onSearchPokemon('')
     }
 
