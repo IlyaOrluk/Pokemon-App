@@ -27,7 +27,12 @@ class PokemonSpecies extends React.Component {
         const { species: { name, genus, color, growh_rate, habitat, shape, varieties } } = this.props;
 
         if (this.props.loading) {
-            return <Spinner />
+            return (
+                <React.Fragment>
+                    <Spinner />
+                    <h2>Finding Species...</h2>
+                </React.Fragment>
+            )
         }
 
         if (this.props.error) {

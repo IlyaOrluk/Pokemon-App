@@ -12,22 +12,8 @@ const Detail = ({ item, field, label, itemTag }) => {
 };
 
 class ItemDetailsContainer extends React.Component {
-
-    componentDidMount() {
-        this.props.fetchItem(this.props.fetchItemValue);
-    }
-
-    componentDidUpdate(prevProps) {
-        if (this.props.fetchItemValue !== prevProps.fetchItemValue) {
-            this.props.fetchItem(this.props.fetchItemValue)
-        }
-    }
-
     render() {
         const { item, loading, error } = this.props;
-        if (loading) {
-            return <Spinner />
-        }
 
         if (error) {
             return <ErrorIndicator />

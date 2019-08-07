@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import './item-list.css';
 
-const ItemList = ({ items, pageRouterSelected, listCount, onError }) => {
+const ItemList = ({ items, onError }) => {
   return (
     <div className="item-list">
       {

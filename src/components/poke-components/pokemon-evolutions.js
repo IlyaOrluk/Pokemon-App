@@ -19,13 +19,19 @@ class PokemonEvolutions extends React.Component {
         }
     }
 
-    componentWillMount(){
+    componentWillMount() {
         evolutionsRequested();
     }
 
     render() {
-        if (this.props.loading) {
-            return <Spinner />
+        if (this.props.loading || this.props.evolutions.chain === undefined) {
+            return (
+                <React.Fragment>
+                    <Spinner />
+                    <h2>Finding Evolutions...</h2>
+                </React.Fragment>
+
+            )
         }
 
         if (this.props.error) {
@@ -45,14 +51,14 @@ class PokemonEvolutions extends React.Component {
                     <div className='pokemon-evolutions'>
                         {
                             levelTwo.map((item, id) => {
-                                const arrowNextEvo = ( id < 1) ? <i className="fas fa-long-arrow-alt-right"></i> : null;
+                                const arrowNextEvo = (id < 1) ? <i className="fas fa-long-arrow-alt-right"></i> : null;
                                 const nextEvo = item.levelTrhee ?
                                     <Link className='pokemon-evolution' to={`/pokemon/${item.levelTrhee.name}`}>
                                         {arrowNextEvo}
                                         <img src={item.levelTrhee.img} alt='third-evolution' />
                                         <span>{item.levelTrhee.name}</span>
                                     </Link> : null;
-                                
+
                                 return (
                                     <React.Fragment key={id}>
                                         <div className='second-evolutions-chain'>
