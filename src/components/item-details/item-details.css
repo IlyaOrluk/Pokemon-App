@@ -1,11 +1,3 @@
-.preview-item-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: rgb(18, 41, 70);
-  background: rgba(255, 255, 255, 0.575);
-  margin-bottom: 50px;
-}
 .preview-item {
   display: flex;
   align-items: center;

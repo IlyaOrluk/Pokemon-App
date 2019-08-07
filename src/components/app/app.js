@@ -17,9 +17,9 @@ const App = () => {
           component={HomePage}
           exact />
         <Route path="/pokemon/:name"
-          render={({ match }) => {
+          render={({ match, history }) => {
             const { name } = match.params;
-            return <PokemonPage pokemon={name} />
+            return <PokemonPage pokemon={name} back={history.goBack}/>
           }} exact />
         <Route path="/pokemons/:id"
           render={({ match }) => {

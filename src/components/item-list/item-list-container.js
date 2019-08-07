@@ -41,7 +41,7 @@ class ItemListContainer extends React.Component {
           totalRecords={itemsCount}
           pageLimit={listCount}
           pageNeighbours={1}
-          onPageChanged={() => { }}
+          onPageChanged={() => {}}
           currentPage={pageRouterSelected + 1} />
       </React.Fragment>
     );

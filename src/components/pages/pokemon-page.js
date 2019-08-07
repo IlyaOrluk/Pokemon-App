@@ -4,16 +4,16 @@ import { withService } from '../hoc';
 import { fetchItem } from '../../actions';
 import { compose } from '../../utils';
 
-
-
-
 import ItemDetailsContainer from '../item-details';
 import { PokemonSpecies, PokemonEvolutions } from '../poke-components';
 
-const PokemonPage = ({ item, loading, error, fetchItem, pokemon, species }) => {
+import './pokemon-page.css';
+
+const PokemonPage = ({ item, loading, error, fetchItem, pokemon, species, back }) => {
     console.log(item.species)
     return (
         <div className='preview-item-box'>
+            <span className='back-btn' onClick={back}><i className="fas fa-chevron-circle-left"></i>Back</span>
             <ItemDetailsContainer
                 fetchItemValue={pokemon}
                 fetchItem={fetchItem}
